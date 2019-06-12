@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "422257678246",
+    "firebase_url": "https://renade-29a4e.firebaseio.com",
+    "project_id": "renade-29a4e",
+    "storage_bucket": "renade-29a4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422257678246:android:0d2a47ff252e5afe",
+        "android_client_info": {
+          "package_name": "com.example.renade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422257678246-trq6rora7ubj0uov93m725fhsbeabluj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASJZPxCyBP-hq-2l9GL4DojW95-GKld3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422257678246-trq6rora7ubj0uov93m725fhsbeabluj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
