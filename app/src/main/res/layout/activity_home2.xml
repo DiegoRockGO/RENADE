@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.Home2Activity">
@@ -234,11 +235,58 @@
                 app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
             <Button
-                android:id="@+id/button"
-                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/btnFoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="250dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorAccent"
+                android:onClick="onclick"
+                android:text="Añadir una fotografia"
+                android:textColor="@android:color/white" />
+
+
+            <ImageView
+                android:id="@+id/imgFoto"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/foto" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/regBtnSalir"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/reg_btn_style"
+                android:onClick="atras"
+                android:text="atras"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+
+            <Button
+                android:id="@+id/button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/reg_btn_style"
@@ -247,6 +295,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/editText15"
                 app:layout_constraintTop_toBottomOf="@+id/editText16" />
+
+
+            </RadioGroup>
 
 
 

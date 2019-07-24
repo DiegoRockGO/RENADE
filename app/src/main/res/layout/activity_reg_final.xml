@@ -37,20 +37,43 @@
             app:layout_constraintTop_toBottomOf="@+id/textView17"
             app:srcCompat="@drawable/renade" />
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/regBtnSalir"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/reg_btn_style"
+            android:onClick="salir"
+            android:text="Salir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
         <Button
             android:id="@+id/button2"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="250dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="95dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/reg_btn_style"
             android:onClick="fin"
-            android:text="Salir"
+            android:text="añadir mas registros"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+        </RadioGroup>
 
     </LinearLayout>
 

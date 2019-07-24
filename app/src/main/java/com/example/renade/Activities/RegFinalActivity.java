@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.renade.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegFinalActivity extends AppCompatActivity {
 
@@ -20,6 +21,19 @@ public class RegFinalActivity extends AppCompatActivity {
         Intent fin = new Intent(this,HomeActivity.class);
 
         startActivity(fin);
+
+    }
+
+    public void salir (View view){
+        Intent salir = new Intent(this,LoginActivity.class);
+
+        startActivity(salir);
+
+        FirebaseAuth.getInstance().signOut();
+        Intent loginActivity = new Intent(getApplicationContext(),LoginActivity.class);
+        startActivity(loginActivity);
+        finish();
+
 
     }
 }

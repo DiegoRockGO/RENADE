@@ -49,7 +49,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-
         Log.i(TAG, "onCreate: Iniciando Login activity dentro del contexto main");
 
         setContentView(R.layout.activity_login);
@@ -62,15 +61,23 @@ public class LoginActivity extends AppCompatActivity {
         HomeActivity = new Intent(this,com.example.renade.Activities.HomeActivity.class);
 
 
+        loginBtn = findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-    }
+                Intent registerActivity = new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(registerActivity);
+                finish();
 
-    public void onClick(View view) {
+
+            }
+        });
+
         Login_ProgressBar.setVisibility(View.INVISIBLE);
-        loginBtn.setOnClickListener(new View.OnClickListener()
+        loginBtn.setOnClickListener(new View.OnClickListener() {
 
 
-        {
 
             @Override
             public void onClick(View view) {
@@ -155,3 +162,4 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 }
+

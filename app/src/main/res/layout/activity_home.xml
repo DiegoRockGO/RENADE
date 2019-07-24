@@ -254,13 +254,35 @@
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toEndOf="@+id/textView12"/>
 
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/regBtnSalir"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/reg_btn_style"
+                    android:onClick="salir"
+                    android:text="Salir del registro"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
             <Button
                 android:id="@+id/regBtnNext"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="250dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="100dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/reg_btn_style"
                 android:onClick="siguiente"
@@ -268,6 +290,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText11" />
 
+
+            </RadioGroup>
 
         </LinearLayout>
 

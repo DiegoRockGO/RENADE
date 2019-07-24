@@ -147,8 +147,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void updateUI() {
 
-        Intent homeActivity = new Intent(getApplicationContext(),HomeActivity.class);
-        startActivity(homeActivity);
+
+
+        FirebaseAuth.getInstance().signOut();
+        Intent loginActivity = new Intent(getApplicationContext(),LoginActivity.class);
+        startActivity(loginActivity);
         finish();
 
 
