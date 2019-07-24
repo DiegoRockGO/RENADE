@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RENADE</string>
+    <string name="lbl_reg_nac_per_des">REGISTRO NACIONAL DE PERSONAS DESAPARECIDAS</string>
+    <string name="title_activity_emergencia">EmergenciaActivity</string>
 </resources>

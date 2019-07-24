@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.RegisterActivity">
+    tools:context=".Activities.LoginActivity">
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/login_imageView"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginStart="10dp"
@@ -28,35 +28,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/hombre"
-                app:srcCompat="@drawable/hombre"
+                android:src="@drawable/renade"
                 tools:ignore="MissingConstraints" />
 
-            <android.support.constraint.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_begin="737dp" />
-
             <EditText
-                android:id="@+id/regName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:ems="10"
-                android:hint="Nombre"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:ignore="MissingConstraints" />
-            <EditText
-                android:id="@+id/regMail"
+                android:id="@+id/login_Mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -73,7 +49,7 @@
                 tools:ignore="MissingConstraints" />
 
             <EditText
-                android:id="@+id/regPassword"
+                android:id="@+id/login_Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -90,24 +66,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/regMail"
                 tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/regPassword2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:ems="10"
-                android:hint="Confirmar Contraseña"
-                android:inputType="textPassword"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/regPassword" />
-
             <Button
-                android:id="@+id/regBtn"
+                android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -117,28 +77,59 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/reg_btn_style"
-                android:text="Registrar"
+                android:onClick="onClick"
+                android:text="Ingresar"
                 android:textColor="#ffffff"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/regPassword2"
                 app:layout_constraintVertical_bias="0.243" />
+            <TextView
+                android:id="@+id/login_regName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="No estas registrado ? "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
+            <Button
+                android:id="@+id/login_regBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/reg_btn_style"
+                android:onClick="registrar"
+                android:text="Crear una cuenta en RENADE"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.243" />
 
             <ProgressBar
-                android:id="@+id/Register_ProgressBar"
+                android:id="@+id/Login_ProgressBar"
                 style="@style/Widget.AppCompat.ProgressBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/regBtn"
-                app:layout_constraintEnd_toEndOf="@+id/regBtn"
-                app:layout_constraintStart_toStartOf="@+id/regBtn"
-                app:layout_constraintTop_toTopOf="@+id/regBtn"
+                app:layout_constraintBottom_toBottomOf="@+id/loginBtn"
+                app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+                app:layout_constraintStart_toStartOf="@+id/loginBtn"
+                app:layout_constraintTop_toTopOf="@+id/loginBtn"
                 tools:ignore="MissingConstraints" />
+
+
 
         </LinearLayout>
 
+
     </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

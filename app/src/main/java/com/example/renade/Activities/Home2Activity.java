@@ -9,6 +9,7 @@ import com.example.renade.R;
 
 public class Home2Activity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

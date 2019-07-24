@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
         userPassword = findViewById(R.id.regPassword);
         userPassword2 = findViewById(R.id.regPassword2);
         userName = findViewById(R.id.regName);
-        loadingProgress = findViewById(R.id.progressBar);
+        loadingProgress = findViewById(R.id.Register_ProgressBar);
         regBtn = findViewById(R.id.regBtn);
 
         loadingProgress.setVisibility(View.INVISIBLE);
